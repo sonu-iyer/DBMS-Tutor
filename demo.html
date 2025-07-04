@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Tutorial</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        .sidebar {
+            width: 20%;
+            background-color: #f4f4f4;
+            padding: 10px;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+        .sidebar h3 {
+            margin-top: 0;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin: 8px 0;
+        }
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+            padding: 8px;
+            display: block;
+        }
+        .sidebar ul li a:hover {
+            background-color: #ddd;
+            color: #007BFF;
+        }
+        .content {
+            width: 80%;
+            border-left: 1px solid #ccc;
+        }
+        .content iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h3>SQL Tutorial</h3>
+            <ul>
+                <li><a href="DBMShome.html" target="content-frame">SQL Home</a></li>
+                <li><a href="DBMSarch.html" target="content-frame">SQL Intro</a></li>
+                <li><a href="Datamodels.html" target="content-frame">SQL Syntax</a></li>
+                <li><a href="sql_select.html" target="content-frame">SQL Select</a></li>
+                <li><a href="sql_where.html" target="content-frame">SQL Where</a></li>
+                <li><a href="sql_insert.html" target="content-frame">SQL Insert</a></li>
+                <li><a href="sql_update.html" target="content-frame">SQL Update</a></li>
+                <li><a href="sql_delete.html" target="content-frame">SQL Delete</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <iframe name="content-frame" src="sql_home.html"></iframe>
+        </div>
+    </div>
+</body>
+</html>

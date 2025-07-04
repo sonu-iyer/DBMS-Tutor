@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DBMS Tutorial</title>
+<style>
+  .sidebar {
+    width: 200px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  .sidebar h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin: 0 0 20px;
+  }
+  .sidebar a {
+    display: block;
+    padding: 8px 12px;
+    color: #333;
+    text-decoration: none;
+    font-size: 1em;
+  }
+  .sidebar a.active {
+    background-color: #33a8c5;
+    color: white;
+    font-weight: bold;
+  }
+  .sidebar a:hover {
+    background-color: #ddd;
+  }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        .sidebar {
+            width: 20%;
+            background-color: #f4f4f4;
+            padding: 10px;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+        .sidebar h3 {
+            margin-top: 0;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin: 8px 0;
+        }
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+            padding: 8px;
+            display: block;
+        }
+        .sidebar ul li a:hover {
+            background-color: #3285a1;
+            color: #ffffff;
+        }
+        .content {
+            width: 80%;
+            border-left: 1px solid #ccc;
+        }
+        .content iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h3>SQL Tutorial</h3>
+            <ul>
+                <li><a href="DBMShome.html" target="content-frame" class="active">DBMS Home</a></li>
+                <li><a href="Table.html" target="content-frame">DBMS Fundamentals</a></li>
+                <li><a href="DBMSarch.html" target="content-frame">DBMS Architecture</a></li>
+                <li><a href="schema.html" target="content-frame">Schema</a></li>
+                <li><a href="Datamodels.html" target="content-frame">Data Models</a></li>
+                <li><a href="keys.html" target="content-frame">Keys</a></li>
+                <li><a href="joins.html" target="content-frame">Joins</a></li>
+                <li><a href="normalization.html" target="content-frame">Normalization</a></li>
+                <li><a href="transactions.html" target="content-frame">Transactions</a></li>
+                <li><a href="indexes.html" target="content-frame">Indexes</a></li>
+                <li><a href="languages.html" target="content-frame">DBMS Languages</a></li>
+                <li><a href="types.html" target="content-frame">Types Of DBMS</a></li>
+                <li><a href="concurrency.html" target="content-frame">Concurrency Control</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <iframe name="content-frame" src="DBMShome.html"></iframe>
+        </div>
+    </div>
+</body>
+</html>

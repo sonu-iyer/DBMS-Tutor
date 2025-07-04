@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .quiz-container {
+            display: none;
+            margin: 20px auto;
+            max-width: 700px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="active">
+    <h1 style="text-align: center;">Introduction to DBMS</h1>
+    <h2>What is DBMS?</h2>
+   <p>A Database Management System (DBMS) is software that enables the creation, management, and efficient retrieval of data in a database. It simplifies storing and accessing large amounts of information while ensuring data integrity and security.</p>
+   <h2>Key Features Of DBMS</h2>
+   <ol>
+    <li>Data Storage: Organized and efficient.</li>
+    <li>Querying: Retrieve data using SQL or similar query languages.</li>
+    <li>Security: Protects sensitive data.</li>
+    <li>Concurrency: Supports multiple users accessing the database simultaneously.</li>
+    <li>Backup & Recovery: Ensures data safety during failures.
+    </li>
+   </ol>
+   <button onclick="document.getElementById('quiz').style.display='block'">Take a Quiz</button>
+
+    <!-- Quiz Section -->
+    <div id="quiz" class="quiz-container">
+        <h2>DBMS Quiz</h2>
+        <form id="quizForm">
+            <div>
+                <h3>1. What does DBMS stand for?</h3>
+                <label><input type="radio" name="q1" value="a"> Database Management Software</label>
+                <label><input type="radio" name="q1" value="b"> Data Backup Management System</label>
+                <label><input type="radio" name="q1" value="c"> Database Management System</label>
+                <label><input type="radio" name="q1" value="d"> DataBase Mapping Service</label>
+            </div>
+
+            <div>
+                <h3>2. Which of the following is NOT a feature of DBMS?</h3>
+                <label><input type="radio" name="q2" value="a"> Data Storage</label>
+                <label><input type="radio" name="q2" value="b"> Querying</label>
+                <label><input type="radio" name="q2" value="c"> Web Browsing</label>
+                <label><input type="radio" name="q2" value="d"> Backup & Recovery</label>
+            </div>
+
+            <div>
+                <h3>3. What language is commonly used to query databases?</h3>
+                <label><input type="radio" name="q3" value="a"> HTML</label>
+                <label><input type="radio" name="q3" value="b"> CSS</label>
+                <label><input type="radio" name="q3" value="c"> SQL</label>
+                <label><input type="radio" name="q3" value="d"> Python</label>
+            </div>
+
+            <button type="button" onclick="submitQuiz()">Submit Quiz</button>
+        </form>
+        <div id="result" style="text-align:center; margin-top: 15px; font-weight: bold;"></div>
+    </div>
+
+    <script>
+        function submitQuiz() {
+            let score = 0;
+            const answers = {
+                q1: 'c',
+                q2: 'c',
+                q3: 'c'
+            };
+            for (let q in answers) {
+                const selected = document.querySelector(`input[name="${q}"]:checked`);
+                if (selected && selected.value === answers[q]) {
+                    score++;
+                }
+            }
+            document.getElementById('result').innerText = `Your Score: ${score} / 3`;
+        }
+    </script>
+</body>
+</html>
